@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+</head>
+<body>
+    {% for recipe in recipes %}
+        {{ recipe.title }}<br>
+        {{ recipe.category_name }}<br>
+        {{ recipe.description }}<br>
+        {{ recipe.image_url }}<br>
+        {{ recipe.prep_time }}<br>
+        {{ recipe.cook_time }}<br>
+        {{ recipe.difficulty }}<br>
+        {{ recipe.instructions }}<br>
+        {{ recipe.ingredients }}<br>
+        {{ recipe.date_added }}<br>
+        {{ recipe.user_name }}<br>
+    {% endfor %}
+</body>
+</html>

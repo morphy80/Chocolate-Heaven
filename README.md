@@ -140,7 +140,7 @@ Create a free account on Cloudinary.com download my media or create your own.
 
 Visit this [repository link](https://github.com/morphy80/chocolate-heaven-ms3.git) and click on the Clone or Download button to copy the link provided.
 
-![clone](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612006569/chocolate-heaven/Screenshot_2021-01-30_123427_u1yf1a.png)
+![clone](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612011028/chocolate-heaven/Screenshot_2021-01-30_123427_di8rah.png)
 
 In your IDE, open a Terminal window and change to the directory where you want to clone this [repository](https://github.com/morphy80/chocolate-heaven-ms3.git) and type:
 
