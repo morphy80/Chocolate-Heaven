@@ -39,7 +39,7 @@
 
 ## UI/UX
 ### Project goals
-Chocolate Heaven is milestone project for Code Institute Data Centric Development module. The goal of this project is to create, store, edit and delete recipes (CRUD). 
+Chocolate Heaven is milestone project for Code Institute Data Centric Development module. The goal of this project is to create, store, edit and delete recipes (CRUD operations). 
 
 ### User Stories
 
@@ -109,6 +109,7 @@ Below are a list of the programming languages, technologies, frameworks and reso
     * Jinja
     * Werkzeug security
 * MongoDB and MongoDB Compass
+* [Materialize](https://materializecss.com/)
 * Git & GitHub.com
 * Heroku.com pages
 * Markdown

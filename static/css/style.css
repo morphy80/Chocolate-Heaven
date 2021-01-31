@@ -1,0 +1,47 @@
+/*----- @imports -----*/
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Emilys+Candy&family=Rye&family=Special+Elite&display=swap');
+
+/* font-family: 'Bubblegum Sans', cursive;
+font-family: 'Emilys Candy', cursive;
+font-family: 'Rye', cursive;
+font-family: 'Special Elite', cursive; */
+
+
+/*----- :root Variables -----*/
+:root {
+    --purpledarken3: 106, 27, 154; /* #6A1B9A */
+    --purpledarken4: 74, 20, 140; /* #4A148C */
+    --purpleaccent3: 213, 0, 249; /* #D500F9  */
+    --purplelighten1: 171, 71, 188; /* #AB47BC  */
+    --orangelighten2: 255, 183, 77; /* #ffb74d  */
+    --black: 0, 0, 0; /* #000000 */
+    --grey: 158, 158, 158; /* #9E9E9E */
+    --greydarken3: 66, 66, 66; /* #424242 */
+    --white: 255, 255, 255; /* #FFFFFF */
+    --fontDefault: Verdana, Geneva, Tahoma, sans-serif, serif, cursive;
+    --radius8px: 0.5em;
+}
+
+/*----- Font Family classes -----*/
+
+.font-bubblegum-sans {
+    font-family: "Bubblegum Sans", var(--fontDefault);
+}
+
+.font-emilys-candy {
+    font-family: "Emilys Candy", var(--fontDefault);
+    letter-spacing: 1px;
+}
+
+.font-rye {
+    font-family: "Rye", var(--fontDefault);
+    letter-spacing: 1.25px;
+}
+
+.font-special {
+    font-family: "Special Elite", var(--fontDefault);
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
