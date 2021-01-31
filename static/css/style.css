@@ -9,14 +9,14 @@ font-family: 'Special Elite', cursive; */
 
 /*----- :root Variables -----*/
 :root {
-    --purpledarken3: 106, 27, 154; /* #6A1B9A */
-    --purpledarken4: 74, 20, 140; /* #4A148C */
-    --purpleaccent3: 213, 0, 249; /* #D500F9  */
-    --purplelighten1: 171, 71, 188; /* #AB47BC  */
-    --orangelighten2: 255, 183, 77; /* #ffb74d  */
+    --purpleDarken3: 106, 27, 154; /* #6A1B9A */
+    --purpleDarken4: 74, 20, 140; /* #4A148C */
+    --purpleAccent3: 213, 0, 249; /* #D500F9  */
+    --purpleLighten1: 171, 71, 188; /* #AB47BC  */
+    --orangeLighten2: 255, 183, 77; /* #FFB74D  */
     --black: 0, 0, 0; /* #000000 */
     --grey: 158, 158, 158; /* #9E9E9E */
-    --greydarken3: 66, 66, 66; /* #424242 */
+    --greyDarken3: 66, 66, 66; /* #424242 */
     --white: 255, 255, 255; /* #FFFFFF */
     --fontDefault: Verdana, Geneva, Tahoma, sans-serif, serif, cursive;
     --radius8px: 0.5em;
@@ -42,6 +42,78 @@ font-family: 'Special Elite', cursive; */
     font-family: "Special Elite", var(--fontDefault);
 }
 
+.font-sm {
+    font-size: small;
+}
+
+.font-md {
+    font-size: medium;
+}
+
+.font-lg {
+    font-size: large;
+}
+
+/*----- Global Settings -----*/
+body {
+    background-color: rgba(var(--white), 0.5);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.left {
+    text-align: left;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.text-shadow-1 {
+    text-shadow: 1px 1px 1px rgba(var(--black), 0.5);
+}
+
+/* --- Navbar --- */
+.nav-wrapper {
+    border-top: 2px solid rgba(var(--black), 1);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    background: linear-gradient(90deg, rgba(var(--purpleDarken3), 1) 0%,
+                                rgba(var(--purpleDarken4), 1) 50%,
+                                rgba(var(--purpleDarken3), 1) 100%);
+}
+
+nav .brand-logo {
+    font-size: 2em;
+    width: fit-content;
+}
+
+ul.sidenav {
+    display: flex;
+    flex-direction: column;
+}
+
+/*----- Footer -----*/
+footer {
+    font-size: 1.5em;
+    line-height: 2em;
+    padding-top: 1em;
 }

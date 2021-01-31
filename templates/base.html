@@ -19,12 +19,12 @@
         <!-- main top navbar -->
         <nav class="nav-extended text-shadow purple darken-3">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_recipes') }}" class="brand-logo center">Chocolate Heaven</a>
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo center font-rye text-shadow-1">Chocolate Heaven</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home">Home</i></a></li>
-                    <li><a class="dropdown-trigger" href="#" data-target="dropdown1"><i class="fas fa-sort-down">Profile</i></a>
-                        <ul id="dropdown1" class="dropdown-content">
+                <ul class="right hide-on-med-and-down font-special">
+                    <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home fa-sm"></i>Home</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-target="dropdown-main"><i class="fas fa-sort-down fa-sm"></i>Profile</a>
+                        <ul id="dropdown-main" class="dropdown-content">
                             <li><a href="#">Log In</a></li>
                             <li><a href="#">Log Out</a></li>
                             <li><a href="#">Sign In</a></li>
@@ -33,17 +33,18 @@
                             <li><a href="#">Manage Categories</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fas fa-search">Search</i></a></li>
+                    <li><a href="#"><i class="fas fa-search fa-sm"></i>Search</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle fa-sm"></i>About</a></li>
                 </ul>
             </div>
         </nav>
 
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align purple-lighten-text text-darken-4">Chocolate Heaven</h4></li>
-            <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home">Home</i></a></li>
-            <li><a class="dropdown-trigger" href="#" data-target="dropdown2"><i class="fas fa-sort-down">Profile</i></a>
-                <ul id="dropdown2" class="dropdown-content">
+            <li><h4 class="center-align purple-lighten-text text-darken-4 font-rye text-shadow-1">Chocolate Heaven</h4></li>
+            <li><a href="{{ url_for('get_recipes') }}" class="bold font-special"><i class="fas fa-home fa-sm"></i>Home</a></li>
+            <li><a href="#" class="dropdown-trigger bold font-special" data-target="dropdown"><i class="fas fa-sort-down fa-sm"></i>Profile</a>
+                <ul id="dropdown" class="dropdown-content font-special font-sm">
                     <li><a href="#">Log In</a></li>
                     <li><a href="#">Log Out</a></li>
                     <li><a href="#">Sign In</a></li>
@@ -52,7 +53,8 @@
                     <li><a href="#">Manage Categories</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fas fa-search">Search</i></a></li>
+            <li><a href="#" class="bold font-special"><i class="fas fa-info-circle"></i>About</a></li>
+            <li><a href="#" class="bold font-special"><i class="fas fa-search"></i>Search</a></li>
         </ul>
     </header>
 
@@ -63,7 +65,6 @@
         </div>
 
     <!---FOOTER-->
-
     <footer class="page-footer purple darken-4">
         <div class="container">
             <div class="row">
@@ -74,10 +75,10 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        <li><a href="{{ url_for('get_recipes') }}" class="bold font-special font-lg"><i class="fas fa-home fa-sm"></i> Home</a></li>
+                        <li><a href="#" class="dropdown-trigger bold font-special font-lg" data-target="dropdown"><i class="fas fa-sort-down fa-sm"></i> Profile</a></li>
+                        <li><a href="#" class="bold font-special font-lg"><i class="fas fa-search fa-sm"></i> Search</a></li>
+                        <li><a href="#" class="bold font-special font-lg"><i class="fas fa-info-circle fa-sm"></i> About</a></li>
                     </ul>
                 </div>
             </div>
