@@ -106,9 +106,15 @@ nav .brand-logo {
     width: fit-content;
 }
 
-ul.sidenav {
+/* ul.sidenav {
     display: flex;
     flex-direction: column;
+} */
+
+.container-register {
+    font-family: 'Bubblegum Sans', cursive;
+    margin-top: 164px;
+    margin-bottom: 50px;
 }
 
 /*----- Footer -----*/

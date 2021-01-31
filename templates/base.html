@@ -16,6 +16,7 @@
 <body>
 
     <header>
+
         <!-- main top navbar -->
         <nav class="nav-extended text-shadow purple darken-3">
             <div class="nav-wrapper">
@@ -27,7 +28,7 @@
                         <ul id="dropdown-main" class="dropdown-content">
                             <li><a href="#">Log In</a></li>
                             <li><a href="#">Log Out</a></li>
-                            <li><a href="#">Sign In</a></li>
+                            <li><a href="{{ url_for('register') }}">Register</a></li>
                             <li class="divider"></li>
                             <li><a href="#">New Recipe</a></li>
                             <li><a href="#">Manage Categories</a></li>
@@ -47,7 +48,7 @@
                 <ul id="dropdown" class="dropdown-content font-special font-sm">
                     <li><a href="#">Log In</a></li>
                     <li><a href="#">Log Out</a></li>
-                    <li><a href="#">Sign In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li class="divider"></li>
                     <li><a href="#">New Recipe</a></li>
                     <li><a href="#">Manage Categories</a></li>
