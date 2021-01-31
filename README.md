@@ -73,6 +73,9 @@ As an admin I would like to do all of the above plus:
 #### Wireframes
 
 #### Color Palette
+With this color scheme I've tried to match as much as possible all the sites with the same theme and products.
+These standard [Materialize Colors](https://materializecss.com/color.html) work quite well for my project.
+![Color Palette](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612056886/chocolate-heaven/color-scheme-materialize_vypl9a.png)
 
 ### Defensive design
 
