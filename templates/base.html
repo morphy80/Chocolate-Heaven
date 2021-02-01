@@ -26,7 +26,7 @@
                     <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home fa-sm"></i>Home</a></li>
                     <li><a href="#" class="dropdown-trigger" data-target="dropdown-main"><i class="fas fa-user fa-sm"></i>Profile</a>
                         <ul id="dropdown-main" class="dropdown-content">
-                            <li><a href="#">Log In</a></li>
+                            <li><a href="{{ url_for('login') }}">Log In</a></li>
                             <li><a href="#">Log Out</a></li>
                             <li><a href="{{ url_for('register') }}">Register</a></li>
                             <li class="divider"></li>
@@ -46,7 +46,7 @@
             <li><a href="{{ url_for('get_recipes') }}" class="bold font-special"><i class="fas fa-home fa-sm"></i>Home</a></li>
             <li><a href="#" class="dropdown-trigger bold font-special" data-target="dropdown"><i class="fas fa-sort-down fa-sm"></i>Profile</a>
                 <ul id="dropdown" class="dropdown-content font-special font-sm">
-                    <li><a href="#">Log In</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="#">Log Out</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li class="divider"></li>

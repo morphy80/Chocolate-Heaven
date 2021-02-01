@@ -1,22 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Enter the Heaven of Chocolate! | {% endblock %}
 {% block content %}
-<div class="container-register">
+<div class="container-login">
 
-    <h3 class="center-align">Register</h3>
+    <h3 class="center-align">Login</h3>
     <br>
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel">
-                <!-- email -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-envelope prefix indigo-text text-darken-4"></i>
-                        <input id="email" name="email" type="email" 
-                            autocomplete="off" class="validate" required>
-                        <label for="email">Email</label>
-                    </div>
-                </div>
                 <!-- username -->
                 <div class="row">
 					<div class="input-field col s12">
@@ -43,10 +33,10 @@
                         {% endfor %}
                     {% endif %}
                 {% endwith %}
-                <!-- register -->
+                <!-- login -->
                 <div class="row">
                     <button type="submit" class="col s12 btn-large indigo darken-4 text-shadow">
-                        Register <i class="fas fa-user-plus fa-sm"></i>
+                        Log In <i class="fas fa-sign-in-alt fa-sm"></i>
                     </button>
                 </div>
             </div>
@@ -56,11 +46,11 @@
     <div class="row">
         <div class="col s12">
             <p class="center-align">
-                Already Registred?
-                <a href="{{ url_for('login') }}" class="purple-text text-accent-3">Log In</a>
+                New here? Please register first.
+                <a href="{{ url_for('register') }}" class="purple-text text-accent-3">Register Account</a>
             </p>
         </div>
-    </div>      
+    </div>    
 </div>
 
 {% endblock %}
