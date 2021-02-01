@@ -119,10 +119,10 @@ nav .brand-logo {
 /* ---- Forms ---- */
 .container-register,
 .container-login,
-h3 {
+.container-profile {
     color: rgb(var(--indigoDarken4));
     font-family: 'Bubblegum Sans', cursive;
-    margin-top: 164px;
+    margin-top: 120px;
     margin-bottom: 50px;
 }
 
