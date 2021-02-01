@@ -64,13 +64,33 @@ body {
     background-size: cover;
 }
 
+/*----- Main -----*/
 main {
+    margin-top: 6em;
     flex: 1 0 auto;
 }
 
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+/* ---- Homepage settings ----- */
+
+#logo {
+	height: 4rem;
 }
+
+#home_card {
+    height: 40%;
+}
+
+#info {
+	font-size: 1.2rem;
+}
+
+.card-action {
+    color: bold rgb(var(--orangeLighten2));
+}
+
+/* #search {
+	top: -0.7rem;
+} */
 
 .left {
     text-align: left;
@@ -86,6 +106,10 @@ main {
 
 .upper {
     text-transform: uppercase;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(var(--black), 0.5);
 }
 
 .text-shadow-1 {
@@ -115,19 +139,23 @@ nav a.dropdown-trigger {
     padding: 0 35px 0 15px;
 }
 
-/* ul.sidenav {
+.dropdown-content li>a {
+    color: rgb(var(--indigoDarken4));
+}
+
+ul.sidenav {
     display: flex;
     flex-direction: column;
-} */
+}
 
 /* ---- Forms ---- */
 .container-register,
 .container-login,
-.container-profile {
+.container-profile,
+.container-index {
     color: rgb(var(--indigoDarken4));
     font-family: 'Bubblegum Sans', cursive;
-    margin-top: 120px;
-    margin-bottom: 50px;
+    margin: auto;
 }
 
 .flashes p {
@@ -139,4 +167,10 @@ footer {
     font-size: 1.5em;
     line-height: 2em;
     padding-top: 1em;
+}
+
+.footer-copyright {
+    background: linear-gradient(90deg, rgba(var(--indigoDarken4), 1) 0%,
+                                rgba(var(--purpleDarken4), 1) 50%,
+                                rgba(var(--indigoDarken4), 1) 100%);
 }

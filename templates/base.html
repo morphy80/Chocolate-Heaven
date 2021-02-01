@@ -20,16 +20,16 @@
         <!-- main top navbar -->
         <nav class="nav-extended purple darken-3">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_recipes') }}" class="brand-logo center font-rye text-shadow-1">Chocolate Heaven</a>
+                <a href="{{ url_for('home') }}" class="brand-logo center font-rye text-shadow">Chocolate Heaven</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down font-special">
-                    <li><a href="{{ url_for('get_recipes') }}"><i class="fas fa-home fa-sm"></i> Home</a></li>
+                    <li><a href="{{ url_for('home') }}"><i class="fas fa-home fa-sm"></i> Home</a></li>
                     <li><a href="#"><i class="fas fa-search fa-sm"></i> Search</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}" 
                             class="dropdown-trigger" data-target="dropdown-main"><i class="fas fa-user fa-sm"></i> Profile</a>
                         <ul id="dropdown-main" class="dropdown-content">
-                            <li><a href="#">New Recipe</a></li>
+                            <li><a href="#">Add New Recipe</a></li>
                             <li><a href="#">Manage Categories</a></li>
                             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
@@ -45,15 +45,14 @@
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align purple-lighten-text text-darken-4 font-rye text-shadow-1">Chocolate Heaven</h4></li>
-            <li><a href="{{ url_for('get_recipes') }}" class="bold font-special">Home</a></li>
-            <li><a href="#" class="bold font-special">About</a></li>
+            <li><a href="{{ url_for('home') }}" class="bold font-special">Home</a></li>
             <li><a href="#" class="bold font-special"><i class="fas fa-search fa-sm">Search</i></a></li>
             {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}"
                     class="dropdown-trigger bold font-special" data-target="dropdown">Profile</a>
                 <ul id="dropdown" class="dropdown-content font-special font-sm">
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    <li><a href="#">New Recipe</a></li>
+                    <li><a href="#">Add New Recipe</a></li>
                     <li><a href="#">Manage Categories</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}" class="bold font-special">Log In</a></li>
@@ -83,15 +82,13 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a href="{{ url_for('get_recipes') }}" class="bold font-special font-lg">
+                        <li><a href="{{ url_for('home') }}" class="bold font-special font-lg">
                             <i class="fas fa-home fa-sm"></i> Home</a></li>
                         <li><a href="{{ url_for('login') }}"
                                 class="dropdown-trigger bold font-special font-lg" data-target="dropdown">
                             <i class="fas fa-user fa-sm"></i> Profile</a></li>
                         <li><a href="#" class="bold font-special font-lg">
                             <i class="fas fa-search fa-sm"></i> Search</a></li>
-                        <li><a href="#" class="bold font-special font-lg">
-                            <i class="fas fa-info-circle fa-sm"></i> About</a></li>
                     </ul>
                 </div>
             </div>
