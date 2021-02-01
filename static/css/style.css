@@ -111,6 +111,10 @@ nav .brand-logo {
     width: fit-content;
 }
 
+nav a.dropdown-trigger {
+    padding: 0 35px 0 15px;
+}
+
 /* ul.sidenav {
     display: flex;
     flex-direction: column;
