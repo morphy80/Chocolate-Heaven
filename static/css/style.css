@@ -13,6 +13,7 @@ font-family: 'Special Elite', cursive; */
     --purpleDarken4: 74, 20, 140; /* #4A148C */
     --purpleAccent3: 213, 0, 249; /* #D500F9  */
     --purpleLighten1: 171, 71, 188; /* #AB47BC  */
+    --indigoDarken4:26, 35, 126; /*1A237E */
     --orangeLighten2: 255, 183, 77; /* #FFB74D  */
     --black: 0, 0, 0; /* #000000 */
     --grey: 158, 158, 158; /* #9E9E9E */
@@ -63,6 +64,10 @@ body {
     background-size: cover;
 }
 
+main {
+    flex: 1 0 auto;
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -111,10 +116,18 @@ nav .brand-logo {
     flex-direction: column;
 } */
 
-.container-register {
+/* ---- Forms ---- */
+.container-register,
+.container-login,
+h3 {
+    color: rgb(var(--indigoDarken4));
     font-family: 'Bubblegum Sans', cursive;
     margin-top: 164px;
     margin-bottom: 50px;
+}
+
+.flashes p {
+    line-height: 2;
 }
 
 /*----- Footer -----*/
