@@ -72,24 +72,35 @@
     </main>
 
     <!---FOOTER-->
-    <footer class="page-footer purple darken-4">
+    <footer class="page-footer purple darken-4 font-special">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
+                <!-- Site links -->
+                <div class="col l4 offset-l2 s12 center-on-small-only">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a href="{{ url_for('home') }}" class="bold font-special font-lg">
+                        <li><a href="{{ url_for('home') }}" class="bold font-lg">
                             <i class="fas fa-home fa-sm"></i> Home</a></li>
                         <li><a href="{{ url_for('login') }}"
-                                class="dropdown-trigger bold font-special font-lg" data-target="dropdown">
+                                class="dropdown-trigger bold font-lg" data-target="dropdown">
                             <i class="fas fa-user fa-sm"></i> Profile</a></li>
                         <li><a href="#" class="bold font-special font-lg">
                             <i class="fas fa-search fa-sm"></i> Search</a></li>
                     </ul>
+                </div>
+                <!-- Social links -->
+                <div class="col l6 s12 center-align">
+                    <h5 class="white-text">Love chocolate?<br> Let's chat.</h5>
+                    <div class="fa-align-justify" id="social">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="instagram">
+                                <i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/"  target="_blank" rel="noopener" aria-label="facebook">
+                                <i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="twitter">
+                                <i class="fab fa-twitter"></i></a>   
+                        <a href="https://github.com/morphy80"  target="_blank" rel="noopener" aria-label="GitHub - morphy80">
+                                <i class="fab fa-github"></i></a>   
+                    </div>
                 </div>
             </div>
         </div>
