@@ -81,6 +81,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background: url("../images/bg.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
