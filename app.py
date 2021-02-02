@@ -1,7 +1,7 @@
 import os
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
+    redirect, request, session, url_for, Blueprint)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -11,7 +11,7 @@ if os.path.exists("env.py"):
 
 # ---- CONFIG ----- #
 app = Flask(__name__)
-
+errors = Blueprint("errors", __name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY_FLASK")
@@ -118,11 +118,29 @@ def add_recipe():
                 "username": session["user"]
             }
         mongo.db.recipes.insert_one(recipe)
-        flash("Recipes Successfully Added")
+        flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
 
     all_categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=all_categories)
+
+
+# ---- ERRORS ----- #
+
+
+@ app.errorhandler(404)
+def not_found(error):
+    return render_template("errors/404.html"), 404
+
+
+@ app.errorhandler(500)
+def internal_error(error):
+    return render_template("errors/500.html"), 500
+
+
+@errors.route("/<path:path>")
+def path_error(path):
+    return render_template("errors/404.html"), 404
 
 
 if __name__ == "__main__":

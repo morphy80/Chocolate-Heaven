@@ -199,3 +199,8 @@ footer {
                                 rgba(var(--purpleDarken4), 1) 50%,
                                 rgba(var(--indigoDarken4), 1) 100%);
 }
+
+.container-error {
+    margin: auto;
+    width: 75vw;
+}

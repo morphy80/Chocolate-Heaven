@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Page Not Found | {% endblock %}
+{% block content %}
+
+<!-- Error 500 -->
+<div class="container-error">
+    <div class="center-align">
+        <div class="row">
+            <div class="col s12">
+                <img src="{{ url_for('static', filename='images/500-error.png') }}" alt="Page Not Found"
+                    class="error-img responsive-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <h2 class="purple-text bold font-bubblegum-sans text-shadow-1">
+                    <span class="purple-text text-accent-3">Whoops!</span>
+                    It's been a mistake.
+                    <br>
+                    Take me
+                    <a href="{{ url_for('index') }}" class="indigo-text">back home
+                        <i class="far fa-arrow-alt-circle-left material-icons small" aria-hidden="true"></i>
+                    </a>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
