@@ -168,6 +168,21 @@ ul.sidenav {
     margin: auto;
 }
 
+.container-form {
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.input-field textarea {
+    font-family: 'Bubblegum Sans', cursive;
+    font-weight: 200;
+}
+
+.input-field input {
+    font-family: 'Bubblegum Sans', cursive;
+    font-weight: bold;
+}
+
 .flashes p {
     line-height: 2;
 }

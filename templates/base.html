@@ -29,7 +29,7 @@
                     <li><a href="{{ url_for('profile', username=session['user']) }}" 
                             class="dropdown-trigger" data-target="dropdown-main"><i class="fas fa-user fa-sm"></i> Profile</a>
                         <ul id="dropdown-main" class="dropdown-content">
-                            <li><a href="#">Add New Recipe</a></li>
+                            <li><a href="{{ url_for('add_recipe') }}">Add New Recipe</a></li>
                             <li><a href="#">Manage Categories</a></li>
                             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
@@ -52,7 +52,7 @@
                     class="dropdown-trigger bold font-special" data-target="dropdown">Profile</a>
                 <ul id="dropdown" class="dropdown-content font-special font-sm">
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    <li><a href="#">Add New Recipe</a></li>
+                    <li><a href="{{ url_for('add_recipe') }}">Add New Recipe</a></li>
                     <li><a href="#">Manage Categories</a></li>
                 {% else %}
                     <li><a href="{{ url_for('login') }}" class="bold font-special">Log In</a></li>

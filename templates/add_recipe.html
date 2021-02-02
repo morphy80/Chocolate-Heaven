@@ -1,0 +1,75 @@
+{% extends 'base.html'%}
+{% block title %}Add New Recipe{% endblock %}
+{% block content %}
+
+<div class="container-form font-special"> 
+<h3 class="indigo-text text-darken-4 center-align">Share your favorite recipe</h3>
+
+    <div class="row card-panel grey lighten-5">
+        <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-text-width prefix indigo-text text-darken-4"></i>
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="recipe_name">Title</label>
+                </div>
+            </div>
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix indigo-text text-darken-4"></i>
+					<select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="category_name">Recipe Category</label>
+				</div>
+			</div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix indigo-text text-darken-4"></i>
+                    <textarea id="recipe_description" name="recipe_description" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_description">Description</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-photo-video prefix indigo-text text-darken-4"></i>
+                    <textarea id="img_url" name="img_url"  minlength="5"
+                        maxlength="100" class="materialize-textarea validate" required></textarea>
+                    <label for="img_url">Please provide and Image_URL</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-list-ol prefix indigo-text text-darken-4"></i>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5"
+                    maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_ingredients">Ingredients</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-ruler prefix indigo-text text-darken-4"></i>
+                    <textarea id="recipe_instructions" name="recipe_instructions" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_instructions">Instructions</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix indigo-text text-darken-4"></i>
+                    <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                    <label for="due_date">Due Date</label>
+                </div>
+            </div>
+            <button class="btn right waves-effect waves-light indigo darken-4 font-special" type="submit" name="action">Submit
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
