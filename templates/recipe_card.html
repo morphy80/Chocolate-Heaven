@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% block title %} {{recipe.recipe_name}} {% endblock %}
+{% block content %}
+
+<!--When the user clicks on the recipe, this page will be loaded to see the full recipe-->
+<div class="container recipe_one">
+    <div class="row-featurette">
+        <div class="col md7">
+            <!--Card with the recipe's components like title, ingredients, steps, picture and category name-->
+            <h4 class="card-title center">{{recipe.recipe_name}}</h4>
+            <h3> Ingredients: </h3>
+            <ul>
+                {% for ingredient in ingredients %}
+                    <li>{{ recipe.ingredients }}</li>
+                {% endfor %}
+            </ul>
+            <h3>Instructions: </h3>
+            <p><br>{{recipe.instructions}} </p>
+        </div>
+        <div class="col md5">
+            <img alt="picture" class="responsive-img" src="{{recipe.img_url}}">
+            <div class="card-action">
+                <h3 class ="card-category"> Category: </h3>
+                <a class = "category-name" href="{{url_for('view_categories', category_name= recipe.category_name)}}">
+                    {{recipe.category_name}}
+                </a>  
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

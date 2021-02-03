@@ -2,26 +2,38 @@
 {% block title %}Recipes of Sweet{% endblock %}
 {% block content %}
 
-<div class="container-recipes">
+<div class="container-recipes font-special">
 <h3 class="indigo-text text-darken-4 center-align">All recipes are shown bellow</h3>
-    <ul class="collapsible capitalize font-special">
-        {% for recipe in recipes %}
-        <li>
-            <div class="collapsible-header white-text indigo darken-4 text-shadow-1">
-                <i class="fas fa-caret-down"></i>
-                <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.date_added }} | {{ recipe.username }}
-            </div>
-            <div class="collapsible-body">
-                <p><strong>{{ recipe.category_name }}</strong></p>
-                <img alt="img" class="responsive-img" src="{{recipe.img_url}}">
-                <p>{{ recipe.description }}</p>
-                <p>{{ recipe.instructions }}</p>
-                <p>{{ recipe.ingredients }}</p>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
 
-    
+    <div class="row">
+        {% for recipe in recipes %}
+        <div class="recipe-publish col m4 s12">
+            <!--Recipes card containing the basic informations about the recipe, and the link the full version
+                To offer better user experience, the picture and the title is also clickable and redirects to the same page as View recipe link-->
+            <div class="card center" id="recipe_card">
+                <div class="card-image" id="img_recipe">
+                    <a href="#">
+                        <img alt="img" class="responsive-img" src="{{ recipe.img_url }}"> 
+                    </a> 
+                </div>
+                <div class="card-content">
+                    <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
+                        <span class="card-title bold indigo-text text-darken-4 text-shadow-1" 
+                            id="recipe_name">{{ recipe.recipe_name }}
+                        </span>
+                    </a>
+                <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" 
+                    class="waves-effect waves-pink purple-text text-darken-3 font-emilys-candy">View Recipe</a>
+                </div>
+                <div class="card-action" id="card-action">
+                    <h5 class="category-header indigo-text text-darken-4 text-shadow-1">Category</h5>
+                    <a href="{{ url_for('view_categories', category_name= recipe.category_name) }}" 
+                        class="orange-text text-lighten-2 text-shadow-1"> {{recipe.category_name}}</a>  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
+
 {% endblock %}

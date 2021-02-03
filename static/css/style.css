@@ -121,8 +121,6 @@ main {
     text-shadow: 1px 1px 1px rgba(var(--black), 0.5);
 }
 
-/*  */
-
 /* --- Navbar --- */
 .nav-wrapper {
     border-top: 2px solid rgba(var(--black), 1);
@@ -160,6 +158,7 @@ ul.sidenav {
 }
 
 /* ---- Forms ---- */
+
 .container-register,
 .container-login,
 .container-profile,

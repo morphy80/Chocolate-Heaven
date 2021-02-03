@@ -110,7 +110,7 @@ def add_recipe():
         recipe = {
                 "recipe_name": request.form.get("recipe_name"),
                 "category_name": request.form.get("category_name"),
-                "recipe_description": request.form.get("recipe_description"),
+                "description": request.form.get("description"),
                 "img_url": request.form.get("img_url"),
                 "ingredients": request.form.get("ingredients"),
                 "instructions": request.form.get("instructions"),
@@ -123,6 +123,27 @@ def add_recipe():
 
     all_categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=all_categories)
+
+
+@app.route('/view_categories/<category_name>')
+def view_categories(category_name):
+    all_recipes = mongo.db.recipes.find({"category_name": category_name})
+    all_categories = list(mongo.db.categories.find())
+    return render_template(
+        'view_categories.html',
+        recipes=all_recipes, category=category_name,
+        categories=all_categories)
+
+
+@app.route('/view_recipe/<recipe_id>')
+def view_recipe(recipe_id):
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_categories = list(mongo.db.categories.find())
+
+    return render_template(
+        'recipe_card.html', recipe=recipe,
+        categories=all_categories)
 
 
 # ---- ERRORS ----- #
