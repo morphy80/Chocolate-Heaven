@@ -11,7 +11,7 @@
             <!--Information about the page, and direct link to all recipes page-->
             <div class="card" id="home-card">
                 <div class="card-stacked">
-                    <div class="card-content flow-text font-special">
+                    <div class="card-content flow-text font-special" id="content-index">
                         <span id="info">Chocolate will always have a special room in our hearts and stomachs no matter how full they might
                             be. Not only does it take the sorrow away, brings smile on our lips but it make the best brownies,
                             cakes and cookies in the world, and it also come with some nice health benefits, too.
@@ -21,35 +21,35 @@
                             see and start baking right away.<br> Enjoy! 
                         </span>
                     </div>
-                    <div class="card-action orange-text text-lighten-2 text-shadow-1">
-                        <a href="{{ url_for('get_recipes') }}">Show me the recipes</a>
+                    <div class="card-action orange-text text-lighten-2 text-shadow-1" id="action-index">
+                        <a href="{{ url_for('get_recipes') }}" id="show">Show me the recipes</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--Search bar with a submit button-->
+    <div class="container">
     <h4 class="font-emilys-candy indigo-text text-darken-4 text-shadow"> What's your favorite? </h4>
-    <!-- <div class="row">
-        <div class="searchbar col m12 s12">
-           
+        <div class="row">
+            <div class="search-bar col m12 s12">
                 <div class="nav-wrapper">
                     <form action="#">
                         <div class="input-field">
-                            <input id="search0" type="search" name="search" required>
-                            <label class="label-icon" for="search" id="search">
-                            <i class="fas fa-search fa-sm">Search</i></label>
-                            <i class="fas fa-times fa-sm">Close</i>
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
                         </div>
                         <div id="search_btn">
-                            <button class="btn waves-effect waves-light indigo darken-4" 
+                            <button class="btn-small waves-effect waves-light indigo darken-4" 
                                 id="submit" type="submit" name="action">Search
                             </button>
                         </div>
                     </form>
                 </div>
-            
+            </div>
         </div>
-    </div> -->
+    </div>
+    
 </div>
 {% endblock %}

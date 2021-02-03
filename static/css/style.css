@@ -168,9 +168,11 @@ ul.sidenav {
     margin: auto;
 }
 
-.container-form {
+.container-form,
+.container-recipes,
+.container-recipe_card {
     width: auto;
-    margin-bottom: 50px;
+    margin-bottom: 1.5em;
 }
 
 .input-field textarea {
@@ -187,6 +189,30 @@ ul.sidenav {
     line-height: 2;
 }
 
+/*----- Recipe Card -----*/
+.container-recipe_card {
+    margin: 40px auto 60px;
+}
+
+.card {
+	border: rgba(var(--purpleDarken4), 1) solid 0.5rem;
+    border-radius: 0.5em;
+    height: 40em;
+}
+
+.card .card-content,
+.card .card-action {
+    padding: 15px;
+}
+
+#content-index {
+    padding-top: 2em;
+}
+
+#action-index {
+    padding-top: 2em;
+}
+
 /*----- Footer -----*/
 footer {
     font-size: 1.5em;
@@ -201,6 +227,42 @@ footer {
 }
 
 .container-error {
-    margin: auto;
+    margin-top: 80px;
+}
+
+/*-------------------- @media queries --------------------*/
+@media (min-width: 992px) {
+    html {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 600px) {
+    .container-error {
     width: 75vw;
+    }
+
+}
+
+@media (max-width: 600px) {
+    a.brand-logo,
+    h3,
+    h4,
+    h5,
+    a.bold {
+        font-size: 1.5em;
+    }
+
+    img#logo {
+        height: 3em;
+    }
+
+    footer.page-footer,
+    #info {
+        font-size: .7em;
+    }
+
+    .footer-copyright p {
+        font-size: .7em;
+    }
 }

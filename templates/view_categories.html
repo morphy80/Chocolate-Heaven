@@ -16,12 +16,12 @@ To view the full recipe, the user has to click on the View recipe button-->
                 </div>
                 <div class="card-content font-emilys-candy">
                     <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
-                        <span class="card-title bold indigo-text text-darken-4 text-shadow-1" id="recipe_name">{{recipe.recipe_name}}</span>
+                        <h4 class="card-title bold indigo-text text-darken-4 text-shadow-1" id="recipe_name">{{recipe.recipe_name}}</h4>
                     </a>
                     <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-pink purple-text text-darken-3"> View Recipe</a>
                 </div>
                 <div class="card-action indigo-text text-darken-4 text-shadow-1">
-                    <h5>Category</h5>
+                    <h5>Category:</h5>
                     <a href="{{ url_for('view_categories', category_name= recipe.category_name) }}"
                         class="orange-text text-lighten-2 text-shadow-1">{{recipe.category_name}}</a>
                 </div>

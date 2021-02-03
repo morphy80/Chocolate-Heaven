@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="container-recipes font-special">
-<h3 class="indigo-text text-darken-4 center-align">All recipes are shown bellow</h3>
+<h4 class="indigo-text text-darken-4 center-align">All recipes are shown bellow</h4>
 
     <div class="row">
         {% for recipe in recipes %}
@@ -18,15 +18,15 @@
                 </div>
                 <div class="card-content">
                     <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
-                        <span class="card-title bold indigo-text text-darken-4 text-shadow-1" 
+                        <h4 class="card-title bold indigo-text text-darken-4 text-shadow-1" 
                             id="recipe_name">{{ recipe.recipe_name }}
-                        </span>
+                        </h4>
                     </a>
                 <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" 
                     class="waves-effect waves-pink purple-text text-darken-3 font-emilys-candy">View Recipe</a>
                 </div>
                 <div class="card-action" id="card-action">
-                    <h5 class="category-header indigo-text text-darken-4 text-shadow-1">Category</h5>
+                    <h5 class="category-header indigo-text text-darken-4 text-shadow-1">Category:</h5>
                     <a href="{{ url_for('view_categories', category_name= recipe.category_name) }}" 
                         class="orange-text text-lighten-2 text-shadow-1"> {{recipe.category_name}}</a>  
                 </div>

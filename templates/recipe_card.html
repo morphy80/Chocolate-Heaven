@@ -3,29 +3,48 @@
 {% block content %}
 
 <!--When the user clicks on the recipe, this page will be loaded to see the full recipe-->
-<div class="container recipe_one">
+<div class="container-recipe_card center-align">
+<!--Card with the recipe's components like title, ingredients, steps, picture and category name-->
     <div class="row-featurette">
-        <div class="col md7">
-            <!--Card with the recipe's components like title, ingredients, steps, picture and category name-->
-            <h4 class="card-title center">{{recipe.recipe_name}}</h4>
-            <h3> Ingredients: </h3>
-            <ul>
-                {% for ingredient in ingredients %}
-                    <li>{{ recipe.ingredients }}</li>
-                {% endfor %}
-            </ul>
-            <h3>Instructions: </h3>
-            <p><br>{{recipe.instructions}} </p>
-        </div>
-        <div class="col md5">
-            <img alt="picture" class="responsive-img" src="{{recipe.img_url}}">
-            <div class="card-action">
-                <h3 class ="card-category"> Category: </h3>
-                <a class = "category-name" href="{{url_for('view_categories', category_name= recipe.category_name)}}">
-                    {{recipe.category_name}}
-                </a>  
+    <h4 class="card-title indigo-text text-darken-4 font-emilys-candy">{{recipe.recipe_name}}</h4>
+        <div class="col s12 m7 font-special">
+            <div class="card" id="recipe_card">
+                <div class="card-image" id="img_recipe">
+                    <img alt="img" class="responsive-img" src="{{recipe.img_url}}">
+                        <h4 class="card-title font-emilys-candy">{{recipe.recipe_name}}</h4>
+                </div>
+
+                <div class="card-content left-align">
+                    <div class="row">
+                        <div class="col s12 m6 l6">
+                            <h5>Ingredients: </h5>
+                            <p><br>{{recipe.ingredients}} </p>
+                            <ul>
+                                {% for ingredient in ingredients %}
+                                    <li>{{ recipe.ingredients }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <h5>Instructions: </h5>
+                            <p><br>{{recipe.instructions}} </p>
+                            <ul>
+                                {% for instruction in instructions %}
+                                    <li>{{ recipe.instructions }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-action" id="card-action">
+                    <h5 class="category-header indigo-text text-darken-4 text-shadow-1">Category:</h5>
+                    <a href="{{ url_for('view_categories', category_name= recipe.category_name) }}" 
+                        class="orange-text text-lighten-2 text-shadow-1"> {{recipe.category_name}}</a>  
+                </div>
             </div>
         </div>
     </div>
+
 </div>
 {% endblock %}
