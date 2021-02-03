@@ -7,44 +7,45 @@
 <!--Card with the recipe's components like title, ingredients, steps, picture and category name-->
     <div class="row-featurette">
     <h4 class="card-title indigo-text text-darken-4 font-emilys-candy">{{recipe.recipe_name}}</h4>
-        <div class="col s12 m7 font-special">
-            <div class="card" id="recipe_card">
-                <div class="card-image" id="img_recipe">
-                    <img alt="img" class="responsive-img" src="{{recipe.img_url}}">
-                        <h4 class="card-title font-emilys-candy">{{recipe.recipe_name}}</h4>
-                </div>
 
-                <div class="card-content left-align">
-                    <div class="row">
-                        <div class="col s12 m6 l6">
-                            <h5>Ingredients: </h5>
-                            <p><br>{{recipe.ingredients}} </p>
-                            <ul>
-                                {% for ingredient in ingredients %}
-                                    <li>{{ recipe.ingredients }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <div class="col s12 m6 l6">
-                            <h5>Instructions: </h5>
-                            <p><br>{{recipe.instructions}} </p>
-                            <ul>
-                                {% for instruction in instructions %}
-                                    <li>{{ recipe.instructions }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
+        <div class="col s12 m7 font-special">
+            <div class="card sticky-action" id="recipe_card">
+                <div class="card-image" id="card_img">
+                    <img alt="img" class="responsive-img activator" src="{{recipe.img_url}}">
+                        <h4 class="card-title font-emilys-candy">{{recipe.recipe_name}}</h4>
                 </div>
 
                 <div class="card-action" id="card-action">
                     <h5 class="category-header indigo-text text-darken-4 text-shadow-1">Category:</h5>
                     <a href="{{ url_for('view_categories', category_name= recipe.category_name) }}" 
-                        class="orange-text text-lighten-2 text-shadow-1"> {{recipe.category_name}}</a>  
+                        class="orange-text text-lighten-2 text-shadow-1"> {{recipe.category_name}}</a> 
+                </div>
+
+                <div class="card-reveal left" id="card-reveal">
+                    <span class="card-title indigo-text text-darken-4 text-shadow-1">
+                        <i class="material-icons right">close</i></span>
+                    <h5 class="indigo-text text-darken-4 text-shadow-1">Ingredients: </h5><br>
+                    <ul>
+                        {% for ingredient in ingredients %}
+                            <li>{{ ingredient }}</li>
+                        {% endfor %}
+                    </ul>
+                    <br>
+                    <h5 class="indigo-text text-darken-4 text-shadow-1">Instructions: </h5><br>
+                    <ul>
+                        {% for instruction in instructions %}
+                            <li>{{ instruction }}</li>
+                        {% endfor %}
+                    </ul>
+                    <br>
+                    <p class="indigo-text text-darken-4 text-shadow-1">Posted by: {{recipe.username}}</p>
+                    <p class="text-lowercase indigo-text text-darken-4 text-shadow-1"> &nbsp;
+                        at {{recipe.date_added}} in category: {{recipe.category_name}}
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
 
+    </div>
 </div>
 {% endblock %}

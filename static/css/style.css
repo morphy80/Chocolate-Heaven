@@ -47,6 +47,10 @@ font-family: 'Special Elite', cursive; */
     font-size: small;
 }
 
+.font-xsm{
+    font-size: x-small;
+}
+
 .font-md {
     font-size: medium;
 }
@@ -190,20 +194,50 @@ ul.sidenav {
 }
 
 /*----- Recipe Card -----*/
-.container-recipe_card {
-    margin: 40px auto 60px;
-}
 
 .card {
 	border: rgba(var(--purpleDarken4), 1) solid 0.5rem;
     border-radius: 0.5em;
     height: 40em;
+    margin-bottom: 2em;
 }
 
-.card .card-content,
-.card .card-action {
-    padding: 15px;
+.card-image img {
+    object-fit: cover;
+    height: 55vw;
 }
+
+.card .card-image {
+    padding: 0;
+    width: 100%;
+}
+
+#img_recipe {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.card .card-content {
+    padding: 0.5em;
+}
+
+.card .card-action {
+    padding: 0.5em;
+    text-align: center;
+    justify-items: center;
+    position: initial;
+}
+
+.card .card-reveal {
+    background-color: rgba(var(--white), 0.9);
+    padding: 1em;
+}
+
+.card .card-reveal h5 {
+    line-height: 1.5em;
+}
+
 
 #content-index {
     padding-top: 2em;
@@ -242,6 +276,9 @@ footer {
     width: 75vw;
     }
 
+    .card-image img {
+        height: 38vh;
+    }
 }
 
 @media (max-width: 600px) {

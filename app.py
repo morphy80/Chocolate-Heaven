@@ -140,10 +140,13 @@ def view_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     all_categories = list(mongo.db.categories.find())
+    ingredients = recipe["ingredients"].split(",")
+    instructions = recipe["instructions"].split(".")
 
     return render_template(
         'recipe_card.html', recipe=recipe,
-        categories=all_categories)
+        categories=all_categories,
+        ingredients=ingredients, instructions=instructions)
 
 
 # ---- ERRORS ----- #

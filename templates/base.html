@@ -24,7 +24,7 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down font-special">
                     <li><a href="{{ url_for('home') }}"><i class="fas fa-home fa-sm"></i> Home</a></li>
-                    <li><a href="#"><i class="fas fa-search fa-sm"></i> Search</a></li>
+                    <!-- <li><a href="#"><i class="fas fa-search fa-sm"></i> Search</a></li> -->
                     {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}" 
                             class="dropdown-trigger" data-target="dropdown-main"><i class="fas fa-user fa-sm"></i> Profile</a>

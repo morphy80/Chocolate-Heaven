@@ -14,7 +14,8 @@
                 <div class="card-image" id="img_recipe">
                     <a href="#">
                         <img alt="img" class="responsive-img" src="{{ recipe.img_url }}"> 
-                    </a> 
+                    </a>
+                    <p class="font-xsm left indigo-text text-darken-4">Posted by: {{recipe.username}} &nbsp; at {{recipe.date_added}}</p>
                 </div>
                 <div class="card-content">
                     <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
@@ -22,13 +23,13 @@
                             id="recipe_name">{{ recipe.recipe_name }}
                         </h4>
                     </a>
-                <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" 
-                    class="waves-effect waves-pink purple-text text-darken-3 font-emilys-candy">View Recipe</a>
+                    <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" 
+                        class="waves-effect waves-pink purple-text text-darken-3 font-emilys-candy">View Recipe</a>
                 </div>
                 <div class="card-action" id="card-action">
                     <h5 class="category-header indigo-text text-darken-4 text-shadow-1">Category:</h5>
                     <a href="{{ url_for('view_categories', category_name= recipe.category_name) }}" 
-                        class="orange-text text-lighten-2 text-shadow-1"> {{recipe.category_name}}</a>  
+                        class="orange-text text-lighten-2 text-shadow-1"> {{recipe.category_name}}</a> 
                 </div>
             </div>
         </div>
