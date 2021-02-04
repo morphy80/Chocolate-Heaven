@@ -1,8 +1,8 @@
 ## Data - Centric Development Project, MS3-Code Institute
 # Chocolate Heaven
 - description
-![site logo]()
-[Visit deployed site]()
+![site logo](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612466158/chocolate-heaven/logo_krumdn.png)
+[Visit deployed site](https://chocolate-heaven.herokuapp.com/)
 
 ## Table of Contents
 
@@ -68,9 +68,22 @@ As an admin I would like to do all of the above plus:
 
 ![Demo Picture]()
 
+
+Fonts used: [Bubblegum Sans](https://fonts.google.com/specimen/Bubblegum+Sans?query=bubb&preview.text_type=custom), [Emilys Candy](https://fonts.google.com/specimen/Emilys+Candy?query=Emilys+Candy&preview.text_type=custom), [Rye](https://fonts.google.com/specimen/Rye?query=Rye&preview.text_type=custom),
+ [Special Elite](https://fonts.google.com/specimen/Special+Elite?query=Special+Elite&preview.text_type=custom) imported from Google Fonts.
 #### Research
 
 #### Wireframes
+
+I created my wireframes during the Scope Plane of this project.
+I made wireframes for each page of the site from three different type of devices:
+
+1. [Desktop]()
+
+2. [Tablet]()
+
+3. [Mobile]()
+The implementation ended up slightly different.
 
 #### Color Palette
 With this color scheme I've tried to match as much as possible all the sites with the same theme and products.
@@ -79,8 +92,20 @@ These standard [Materialize Colors](https://materializecss.com/color.html) work 
 
 ### Defensive design
 
+* User is not able to break the site by clicking buttons out of the expected order.
+* All forms handle empty input fields by warning the user and not permitting recipe submission.
+* Navigating between pages via the back/forward buttons does not break the site. 
+* User errors do not cause database errors.
+* User is given feedback for actions/errors by a 404 error page.
+
 ## Features
 ### Notes
+* Admin features will not be available publicly for security reasons. Admin is able to browse, edit and delete all recipes and categories.
+* Only as admin can view, edit or delete categories.
+* Recipes can be viewed publicly by every user, but only can be edited by the user who created the recipe, specificaly.
+* The use of JavaScript is limited only as Jquery to permit Materialize framework to take actions for the componets used.
+* Materialize uses activator for cards so I've chosen to leave it without a proper intuitive button.
+* Media queries are not all set for larger screens so the cards may overflow from their margins.
 
 ### Existing features
 
@@ -101,28 +126,43 @@ Current schema:
 
 Below are a list of the programming languages, technologies, frameworks and resources used for this website.
 
-* HTML5
-* CSS3
-* jQuery
-* Python 3.8
-    * Flask
-    * Jinja
+* [HTML](https://en.wikipedia.org/wiki/HTML5);
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets);
+* [Jquery](https://jquery.com/);
+* [Python](https://www.python.org/download/releases/3.8/);
+    * [Flask](https://flask.palletsprojects.com/en/1.1.x/);
+    * [Jinja](https://jinja.palletsprojects.com/en/2.10.x/);
     * Werkzeug security
-* MongoDB and MongoDB Compass
+* [MongoDB](https://www.mongodb.com/);
 * [Materialize](https://materializecss.com/)
-* Git & GitHub.com
-* Heroku.com pages
-* Markdown
-* FontAwesome.com
-* Google Fonts
+* [GitHub](https://github.com/);
+* [GitPod](https://gitpod.io/);
+* [Heroku](https://dashboard.heroku.com/);
+* [MarkDownLit](https://dlaa.me/markdownlint/);
+* [GoogleFonts](https://fonts.google.com/);
+* [FontAwesome](https://fontawesome.com/)
+* [Favicon](https://www.favicon-generator.org/);
 * Google Chrome Developer tools
 * Cloudinary.com to store all images
-* Favicon.io convert favicon
 
 ## Testing
 Devices and platforms used for testing:
 
-*
+* Google Chrome.
+* Mozilla Firefox.
+* Opera.
+
+- [x] laptop, laptop with touch (width 1440px);
+
+- [x] Galaxy S5;
+
+- [x] Pixel2, Pixel 2XL;
+
+- [x] Iphone 5/SE, Iphone 6/7/8;
+
+- [x] Iphone 6/7/8 Plus, IphoneX;
+
+- [x] Ipad and Ipad Pro;
 
 ### Validators and linters
 
@@ -134,6 +174,7 @@ Devices and platforms used for testing:
 ### Manual testing
 
 ### Errors
+
 
 ## Deployment
 

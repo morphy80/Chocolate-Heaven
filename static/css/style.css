@@ -203,13 +203,14 @@ ul.sidenav {
 }
 
 .card-image img {
-    object-fit: cover;
-    height: 55vw;
+    height: 100%;
 }
 
 .card .card-image {
     padding: 0;
     width: 100%;
+    height: 30em;
+    overflow: hidden;
     cursor: pointer;
 }
 
@@ -227,7 +228,9 @@ ul.sidenav {
     padding: 0.5em;
     text-align: center;
     justify-items: center;
-    position: initial;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 .card .card-reveal {
@@ -279,10 +282,6 @@ footer {
 @media (min-width: 600px) {
     .container-error {
     width: 75vw;
-    }
-
-    .card-image img {
-        height: 38vh;
     }
 }
 
