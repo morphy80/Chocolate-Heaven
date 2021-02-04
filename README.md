@@ -80,11 +80,14 @@ Fonts used: [Bubblegum Sans](https://fonts.google.com/specimen/Bubblegum+Sans?qu
 I created my wireframes during the Scope Plane of this project.
 I made wireframes for each page of the site from three different type of devices:
 
-1. [Desktop]()
+* [home_page](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612476832/chocolate-heaven/Screenshot_2021-02-04_231017_xpigdh.png)
+* [recipes_page](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612476834/chocolate-heaven/Screenshot_2021-02-04_231046_n0nn70.png)
+* [recipe_page_front](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612476836/chocolate-heaven/Screenshot_2021-02-04_231112_kqair8.png)
+* [recipe_page_reveal](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612476838/chocolate-heaven/Screenshot_2021-02-04_231138_wiouja.png)
+* [log_in](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612476839/chocolate-heaven/Screenshot_2021-02-04_231156_x86hba.png)
+* [register](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612476842/chocolate-heaven/Screenshot_2021-02-04_231223_h8otfl.png)
+* [add_recipe_form](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612476843/chocolate-heaven/Screenshot_2021-02-04_231242_rffs3v.png)
 
-2. [Tablet]()
-
-3. [Mobile]()
 The implementation ended up slightly different.
 
 #### Color Palette
