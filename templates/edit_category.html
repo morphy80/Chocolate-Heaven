@@ -1,26 +1,29 @@
 {% extends 'base.html'%}
-{% block title %}Add New Category{% endblock %}
+{% block title %}Edit Category{% endblock %}
 {% block content %}
 
 <div class="container-form font-special"> 
-<h3 class="indigo-text text-darken-4 center-align">Add Category</h3>
+<h3 class="indigo-text text-darken-4 center-align">Edit Category</h3>
 
     <div class="row card-panel grey lighten-5">
-        <form class="col s12" method="POST" action="{{ url_for('add_category') }}">
+        <form class="col s12" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
             <!-- category name -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix indigo-text text-darken-4"></i>
                     <input id="category_name" name="category_name" minlength="5" maxlength="25"
-                        type="text" class="validate" required>
+                        type="text" value="{{ category.category_name }}" class="validate" required>
                     <label for="category_name">Category Name</label>
                 </div>
             </div>
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
+                    <a href="{{ url_for('get_categories') }}" class="btn-small red left text-shadow">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button class="btn-small right waves-effect waves-light indigo darken-4 font-special text-shadow-1"
-                        type="submit" name="action">Add Category <i class="fas fa-paper-plane right"></i>
+                        type="submit" name="action">Edit Category <i class="fas fa-edit right"></i>
                     </button>
                 </div>
             </div>
