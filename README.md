@@ -1,6 +1,6 @@
 ## Data - Centric Development Project, MS3-Code Institute
 # Chocolate Heaven
-- description
+
 ![site logo](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612475355/chocolate-heaven/favicon-32x32_cev9j6.png)
 [Visit deployed site](https://chocolate-heaven.herokuapp.com/)
 
@@ -102,6 +102,7 @@ These standard [Materialize Colors](https://materializecss.com/color.html) work 
 
 ## Features
 ### Notes
+* Not as a footnote but as a first mention: due to the limited time at hand (less than a week!) I had to structure everything to a bare minimum of functionality and layout.
 * Admin features will not be available publicly for security reasons. Admin is able to browse, edit and delete all recipes and categories.
 * Only as admin can view, edit or delete categories.
 * Recipes can be viewed publicly by every user, but only can be edited by the user who created the recipe, specificaly.
@@ -300,8 +301,7 @@ After these steps the app is live and running remotely in Heroku's servers.
 ### Code
 
 ### Images
-* Backgrounds: [home-page](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612277118/chocolate-heaven/bg_ozqp0c.webp)
-* 
+Images are mostly taken from [Unsplash](https://unsplash.com/) and Google Images.
 
 ### Content 
 * Recipes taken from various websites, some of them linked in the Tips section.
@@ -309,6 +309,7 @@ After these steps the app is live and running remotely in Heroku's servers.
 ## Acknowledgements
 Big thansk to tutor support team : Code Institute Tutor support (especially [
 Tim Nelson](https://github.com/TravelTimN) for tutorial and tips), Igor, Kevin, Scott and Miklos and all Slack community.
+
 Special thanks to my coding budy and friend Sabine M.
 
 ## Disclaimer
