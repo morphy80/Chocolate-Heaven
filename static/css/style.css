@@ -247,6 +247,10 @@ ul.sidenav {
     padding-top: 2em;
 }
 
+.btn-small {
+    margin: 5px;
+}
+
 /*----- Footer -----*/
 footer {
     font-size: 1.5em;
@@ -301,5 +305,10 @@ footer {
 
     .footer-copyright p {
         font-size: .7em;
+    }
+
+    a#edit,
+    a#delete {
+        font-size: 0.8em;
     }
 }

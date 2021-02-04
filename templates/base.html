@@ -46,7 +46,8 @@
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align purple-lighten-text text-darken-4 font-rye text-shadow-1">Chocolate Heaven</h4></li>
             <li><a href="{{ url_for('home') }}" class="bold font-special">Home</a></li>
-            <li><a href="#" class="bold font-special"><i class="fas fa-search fa-sm">All</i></a></li>
+            <li><a href="{{ url_for('get_recipes') }}" 
+                    class="bold font-special">All Recipes</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}"
                     class="dropdown-trigger bold font-special" data-target="dropdown">Profile</a>
@@ -84,7 +85,7 @@
                         <li><a href="{{ url_for('login') }}"
                                 class="dropdown-trigger bold font-lg" data-target="dropdown">
                             <i class="fas fa-user fa-sm"></i> Profile</a></li>
-                        <li><a href="#" class="bold font-special font-lg">
+                        <li><a href="{{ url_for('get_recipes') }}" class="bold font-special font-lg">
                             <i class="fas fa-search fa-sm"></i> Search</a></li>
                     </ul>
                 </div>
