@@ -6,13 +6,13 @@
 <h3 class="indigo-text text-darken-4 center-align">Edit the current recipe</h3>
 
     <div class="row card-panel grey lighten-5">
-        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe_id) }}">
+        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
             <!-- title -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-text-width prefix indigo-text text-darken-4"></i>
                     <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
-                        type="text" class="validate" required>
+                        value="{{ recipe.recipe_name }}" type="text" class="validate" required>
                     <label for="recipe_name">Title</label>
                 </div>
             </div>
@@ -21,9 +21,13 @@
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix indigo-text text-darken-4"></i>
 					<select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose Category</option>
+                        <option value="" disabled>Choose Category</option>
                         {% for category in categories %}
+                            {% if category.category_name == recipe.category_name %}
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
 					<label for="category_name">Recipe Category</label>
@@ -34,7 +38,9 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix indigo-text text-darken-4"></i>
                     <textarea id="description" name="description" minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                        maxlength="200" class="materialize-textarea validate" required>
+                        {{- recipe.description -}}
+                    </textarea>
                     <label for="description">Description</label>
                 </div>
             </div>
@@ -43,7 +49,9 @@
                 <div class="input-field col s12">
                     <i class="fas fa-photo-video prefix indigo-text text-darken-4"></i>
                     <textarea id="img_url" name="img_url"  minlength="5"
-                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                        maxlength="200" class="materialize-textarea validate" required>
+                        {{- recipe.img_url -}}
+                    </textarea>
                     <label for="img_url">Please provide and Image_URL</label>
                 </div>
             </div>
@@ -52,7 +60,9 @@
                 <div class="input-field col s12">
                     <i class="fas fa-list-ol prefix indigo-text text-darken-4"></i>
                     <textarea id="ingredients" name="ingredients" placeholder="Add a comma after each ingredient" 
-                    minlength="5" maxlength="200" class="materialize-textarea validate" required></textarea>
+                    minlength="5" maxlength="200" class="materialize-textarea validate" required>
+                        {{- recipe.ingredients -}}
+                    </textarea>
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
@@ -61,7 +71,9 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-ruler prefix indigo-text text-darken-4"></i>
                     <textarea id="instructions" name="instructions" placeholder="Add a '.' after each direction"
-                    minlength="5" maxlength="1000" class="materialize-textarea validate" required></textarea>
+                    minlength="5" maxlength="1000" class="materialize-textarea validate" required>
+                        {{- recipe.instructions -}}
+                    </textarea>
                     <label for="instructions">Instructions</label>
                 </div>
             </div>
@@ -69,16 +81,29 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-calendar-alt prefix indigo-text text-darken-4"></i>
-                    <input id="date_added" name="date_added" type="text" class="datepicker validate" required>
+                    <input id="date_added" name="date_added" type="text" 
+                        value="{{ recipe.date_added }}" class="datepicker validate" required>
                     <label for="date_added">Date added</label>
                 </div>
             </div>
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
-                    <button class="btn-small right waves-effect waves-light indigo darken-4 font-special text-shadow-1"
-                        type="submit" name="action">Edit <i class="fas fa-edit"></i>
+                    <!-- cancel button -->
+                    <a href="{{ url_for('get_recipes') }}" class="btn-large left red text-shadow">
+                        Cancel <i class="fas fa-times-circle fa-sm right"></i>
+                    </a>
+                    <button class="btn-large right waves-effect waves-light indigo darken-4 font-special text-shadow"
+                        type="submit" name="action">Edit <i class="fas fa-edit fa-sm right"></i>
                     </button>
+                    <!-- flash messages -->
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p class="purple-text text-accent-3">{{ message }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </div>
             </div>
         </form>

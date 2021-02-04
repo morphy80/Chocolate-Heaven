@@ -47,26 +47,28 @@
         </div>
     </div>
     <!--Collapsible container with edit and delete buttons-->
+    {% if session.user|lower == recipe.username|lower %}
     <div class="container font-special">
-    <ul class="collapsible">
-        <li>
-            <div class="collapsible-header indigo-text text-darken-4 capitalize">
-                <i class="fas fa-caret-down fa-sm indigo-text text-darken-4"></i> More options 
-            </div>
-            <div class="collapsible-body row">
-                <div class="col m6 s6">
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                    id="edit" class="waves-effect waves-light btn-small col s12 m12">
-                    <i class="far fa-edit left fa-sm"></i>Edit</a>
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header indigo-text text-darken-4 capitalize">
+                    <i class="fas fa-caret-down fa-sm indigo-text text-darken-4"></i> More options 
                 </div>
-                <div class="col m6 s6">
-                <a href="#" 
-                    id="delete" class="red waves-effect waves-light btn-small col s12 m12">
-                    <i class="far fa-trash-alt left fa-sm"></i>Delete</a>
+                <div class="collapsible-body row">
+                    <div class="col m6 s6">
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                        id="edit" class="waves-effect waves-light btn-small col s12 m12">
+                        <i class="far fa-edit left fa-sm"></i>Edit</a>
+                    </div>
+                    <div class="col m6 s6">
+                    <a href="#" 
+                        id="delete" class="red waves-effect waves-light btn-small col s12 m12">
+                        <i class="far fa-trash-alt left fa-sm"></i>Delete</a>
+                    </div>
                 </div>
-            </div>
-        </li>
-    </ul>
+            </li>
+        </ul>
     </div>
+    {% endif %}
 </div>
 {% endblock %}
