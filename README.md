@@ -1,7 +1,7 @@
 ## Data - Centric Development Project, MS3-Code Institute
 # Chocolate Heaven
 - description
-![site logo](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612466158/chocolate-heaven/logo_krumdn.png)
+![site logo](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612475355/chocolate-heaven/favicon-32x32_cev9j6.png)
 [Visit deployed site](https://chocolate-heaven.herokuapp.com/)
 
 ## Table of Contents
@@ -35,7 +35,7 @@
 
 ## Demo
 
-![demo2]
+![demo2](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612474916/chocolate-heaven/ezgif.com-gif-maker_v6pwth.gif)
 
 ## UI/UX
 ### Project goals
@@ -66,7 +66,7 @@ As an admin I would like to do all of the above plus:
 
 ### Design
 
-![Demo](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612474916/chocolate-heaven/ezgif.com-gif-maker_v6pwth.gif)
+![Demo Picture](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612473338/chocolate-heaven/rsz_screenshot_2021-02-04_221344_kclhzh.png)
 
 Main inspiration for the page design comes from [purdys](https://www.purdys.com/) which has an extraordinary selection of chocolates and the variety is well documented and illustrated.
 
@@ -295,8 +295,6 @@ Push repo to Heroku
 $ git push heroku master
 ```
 After these steps the app is live and running remotely in Heroku's servers.
-
-### Heroku
 
 ## Credits
 ### Code
