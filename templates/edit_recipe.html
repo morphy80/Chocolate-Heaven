@@ -1,0 +1,87 @@
+{% extends 'base.html'%}
+{% block title %}Edit Recipe{% endblock %}
+{% block content %}
+
+<div class="container-form font-special"> 
+<h3 class="indigo-text text-darken-4 center-align">Edit the current recipe</h3>
+
+    <div class="row card-panel grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe_id) }}">
+            <!-- title -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-text-width prefix indigo-text text-darken-4"></i>
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="recipe_name">Title</label>
+                </div>
+            </div>
+            <!-- category selection -->
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix indigo-text text-darken-4"></i>
+					<select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="category_name">Recipe Category</label>
+				</div>
+            </div>
+            <!-- description -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix indigo-text text-darken-4"></i>
+                    <textarea id="description" name="description" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="description">Description</label>
+                </div>
+            </div>
+            <!-- image URL -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-photo-video prefix indigo-text text-darken-4"></i>
+                    <textarea id="img_url" name="img_url"  minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="img_url">Please provide and Image_URL</label>
+                </div>
+            </div>
+            <!-- ingredients -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-list-ol prefix indigo-text text-darken-4"></i>
+                    <textarea id="ingredients" name="ingredients" placeholder="Add a comma after each ingredient" 
+                    minlength="5" maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="ingredients">Ingredients</label>
+                </div>
+            </div>
+            <!-- instructions -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-ruler prefix indigo-text text-darken-4"></i>
+                    <textarea id="instructions" name="instructions" placeholder="Add a '.' after each direction"
+                    minlength="5" maxlength="1000" class="materialize-textarea validate" required></textarea>
+                    <label for="instructions">Instructions</label>
+                </div>
+            </div>
+            <!-- date picker -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-calendar-alt prefix indigo-text text-darken-4"></i>
+                    <input id="date_added" name="date_added" type="text" class="datepicker validate" required>
+                    <label for="date_added">Date added</label>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn-small right waves-effect waves-light indigo darken-4 font-special text-shadow-1"
+                        type="submit" name="action">Edit <i class="fas fa-edit"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
