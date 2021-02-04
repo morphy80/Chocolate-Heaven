@@ -55,7 +55,7 @@ As a User I would like to:
 - [x] Get error messages in case user has done something wrong or there is an issue with database.
 
 As an admin I would like to do all of the above plus:
-- [x] Be able to access, edit and delete ALL recipes from admin profile
+- [x] Be able to access, edit and delete ALL recipes and categories from admin profile
 
 ### Developer goals
 
@@ -66,7 +66,9 @@ As an admin I would like to do all of the above plus:
 
 ### Design
 
-![Demo Picture]()
+![Demo](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612474916/chocolate-heaven/ezgif.com-gif-maker_v6pwth.gif)
+
+Main inspiration for the page design comes from [purdys](https://www.purdys.com/) which has an extraordinary selection of chocolates and the variety is well documented and illustrated.
 
 
 Fonts used: [Bubblegum Sans](https://fonts.google.com/specimen/Bubblegum+Sans?query=bubb&preview.text_type=custom), [Emilys Candy](https://fonts.google.com/specimen/Emilys+Candy?query=Emilys+Candy&preview.text_type=custom), [Rye](https://fonts.google.com/specimen/Rye?query=Rye&preview.text_type=custom),
@@ -110,10 +112,35 @@ These standard [Materialize Colors](https://materializecss.com/color.html) work 
 ### Existing features
 
 - [x] Favicon
+- [x] Navbar with submenu for the profile user;
+- [x] User logged in can view the edit function of the recipes;
+- [x] Admin can add, edit and delete categories and recipes;
+- [x] Title of the recipe;
+- [x] List of ingredients formatted with split() method;
+- [x] The recipe's Instructions;
+- [x] The picture of the recipe;
+- [x] The category of the recipe;
+- [x] More options with:-- Edit
+                        -- Delete
+- [x] Register;
+- [x] Login;
+- [x] Search on both home and recipes page;
+- [x] Links as shortcuts for smother navigation;
 
 ### Future features
 
 - [ ] Pagination
+- [ ] Scroll back to top button
+- [ ] Recipe image url validation
+- [ ] Tooltips
+- [ ] Add reviews
+- [ ] Add prep and cooking time
+- [ ] Ingredients and Instructions listed in arrays instead of strings
+- [ ] Lazy loading images 
+- [ ] Calories calculations
+- [ ] Server side credential validation
+- [ ] SSL certificate
+- [ ] Contact form and admin to be able to see all recieved messages directly in the admin console
 
 ### Information Architecture
 MongoDB Atlas is used for storing data for this web site.
@@ -144,6 +171,7 @@ Below are a list of the programming languages, technologies, frameworks and reso
 * [Favicon](https://www.favicon-generator.org/);
 * Google Chrome Developer tools
 * Cloudinary.com to store all images
+* EZGIF to convert demo video to gif
 
 ## Testing
 Devices and platforms used for testing:
@@ -174,7 +202,13 @@ Devices and platforms used for testing:
 ### Manual testing
 
 ### Errors
+* Searching function as a query for recipes might land to the error 404 page. It's a function in progress not yet perfectly implemented.
+* Most of the errors I encountered along the way were simply syntax mistakes.
 
+Current issues:
+* Some of the text or image may overflow due to the unfinished Css.
+* Seach function as mentioned is a 'work in progress'.
+* Images uploaded may not have the standardized size or may render unevenly.
 
 ## Deployment
 
@@ -268,10 +302,16 @@ After these steps the app is live and running remotely in Heroku's servers.
 ### Code
 
 ### Images
+* Backgrounds: [home-page](https://res.cloudinary.com/ddrsbzhmf/image/upload/v1612277118/chocolate-heaven/bg_ozqp0c.webp)
+* 
 
 ### Content 
+* Recipes taken from various websites, some of them linked in the Tips section.
 
 ## Acknowledgements
+Big thansk to tutor support team : Code Institute Tutor support (especially [
+Tim Nelson](https://github.com/TravelTimN) for tutorial and tips), Igor, Kevin, Scott and Miklos and all Slack community.
+Special thanks to my coding budy and friend Sabine M.
 
 ## Disclaimer
 

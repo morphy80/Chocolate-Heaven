@@ -200,9 +200,6 @@ ul.sidenav {
     border-radius: 0.5em;
     height: 40em;
     margin-bottom: 2em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .card-image img {
