@@ -34,11 +34,10 @@
         <div class="row">
             <div class="search-bar col m12 s12">
                 <div class="nav-wrapper">
-                    <form action="#">
+                    <form action="{{ url_for('find_recipe') }}">
                         <div class="input-field">
                             <input id="search" type="search" required>
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">x</i>
+                            <label class="label-icon" for="search"><i class="fas fa-search fa-sm"></i></label>
                         </div>
                         <div id="search_btn">
                             <button class="btn-small waves-effect waves-light indigo darken-4" 
@@ -50,6 +49,6 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 {% endblock %}

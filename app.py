@@ -31,6 +31,20 @@ def get_recipes():
     return render_template("recipes.html", recipes=all_recipes)
 
 
+@app.route("/find_recipe")
+def find_recipe():
+    query = request.args.get("search")
+    search_term = mongo.db.recipes.find(
+        {"ingredients": {"$regex": str(query)}})
+    no_results = mongo.db.recipes.count_documents(
+        {"ingredients": {"$regex": str(query)}})
+    all_categories = list(mongo.db.categories.find())
+    return render_template(
+        "search_results.html",
+        categories=all_categories,
+        search=search_term, no_results=no_results)
+
+
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))

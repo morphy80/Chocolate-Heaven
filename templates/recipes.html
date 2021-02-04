@@ -5,6 +5,26 @@
 <div class="container-recipes font-special">
 <h4 class="indigo-text text-darken-4 center-align">All recipes are shown bellow</h4>
 
+    <!-- search -->
+    <div class="row">
+        <div class="search-bar col m12 s12">
+            <div class="nav-wrapper">
+                <form action="{{ url_for('find_recipe') }}">
+                    <div class="input-field">
+                        <input id="search" name="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="fas fa-search fa-sm"></i></label>
+                    </div>
+                    <div id="search_btn">
+                        <button class="btn-small waves-effect waves-light indigo darken-4" 
+                            id="submit" type="submit" name="action">Search
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% if recipes|length > 0 %}
     <div class="row">
         {% for recipe in recipes %}
         <div class="recipe-publish col m4 s12">
@@ -35,6 +55,8 @@
         </div>
         {% endfor %}
     </div>
+    {% else %}
+        <h4 class="red-text text-darken-4 center-align">No Results Found</h4>
+    {% endif %}
 </div>
-
 {% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block title %}Search Results{% endblock %}
+{% block content %}
+
+
+    {% if no_results == 0 %}
+    <div class="center">
+        <h5> 404</h5>
+            <p> No recipe found </p>
+        <img alt="error" class="responsive-img" id="error" src="{{ url_for('static', filename='images/404-error.png') }}">
+        <a href="{{url_for('add_recipe')}}"> Is it your specialty? Share your recipe...</a>
+    </div>
+    {% endif %}
+
+    <div class="container center results">
+        <div class="row center">
+            {% for recipe in search %}
+            <div class="recipe-publish col m4 s12">
+                <div class="card" id="recipecard">
+                    <div class="card-image" id="img_recipe">
+                        <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}">
+                        <img alt="img_url" src="{{recipe.img_url}}"> 
+                        </a> 
+                    </div>
+                    <div class="card-content">
+                        <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}">
+                        <span class="card-title" id="recipe_name">{{recipe.recipe_name}}</span>
+                        </a>
+                        <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light"> View Recipe</a>
+                    </div>
+                    <div class="card-action">
+                        <h6 class="category-header"> Category: </h6>
+                        <a href="{{url_for('find_recipe', category_name= recipe.category_name)}}">{{recipe.category_name}}</a>  
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
