@@ -29,12 +29,20 @@
                             <i class="far fa-edit left fa-sm"></i>Edit</a>
                         </div>
                         <div class="col m6 s6">
-                            <a href="#" 
+                            <a href="{{ url_for('delete_category', category_id=category._id) }}" 
                             id="delete" class="red waves-effect waves-light btn-small col s12 m12">
                         <i class="far fa-trash-alt left fa-sm"></i>Delete</a>
                         </div>
                     </div>
                 </div>
+                <!-- flash messages -->
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p class="indigo-text text-darken-4">{{ message }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
             </div>
         {% endfor %}
     </div>
