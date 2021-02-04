@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Categories{% endblock %}
+{% block content %}
+
+<div class="container-categories font-special">
+    <h4 class="indigo-text text-darken-4 center-align">You can edit categories below</h4>
+
+    <div class="row">
+        {% for category in categories %}
+            <div class="col s12 m4">
+                <div class="card text-shadow center-align">
+                    <div class="card-image" id="card_img">
+                        <img alt="img" class="responsive-img" src="{{ url_for('static', filename='images/milk.jpg') }}">
+                    </div>
+                    <div class="card-content indigo-text text-darken-4">
+                        <span class="card-title">{{ category.category_name }}</span>
+                    </div>
+                    <div class="card-action">
+                        <div class="col m6 s6">
+                        <a href="#"
+                            id="edit" class="waves-effect waves-light btn-small col s12 m12">
+                            <i class="far fa-edit left fa-sm"></i>Edit</a>
+                        </div>
+                        <div class="col m6 s6">
+                            <a href="#" 
+                            id="delete" class="red waves-effect waves-light btn-small col s12 m12">
+                        <i class="far fa-trash-alt left fa-sm"></i>Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

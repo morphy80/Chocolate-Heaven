@@ -8,7 +8,7 @@
     <div class="row-featurette">
     <h4 class="card-title indigo-text text-darken-4 font-emilys-candy">{{recipe.recipe_name}}</h4>
 
-        <div class="col s12 m7 font-special">
+        <div class="col s12 m6 font-special">
             <div class="card sticky-action" id="recipe_card">
                 <div class="card-image" id="card_img">
                     <img alt="img" class="responsive-img activator" src="{{recipe.img_url}}">
@@ -56,12 +56,12 @@
                 </div>
                 <div class="collapsible-body row">
                     <div class="col m6 s6">
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                        id="edit" class="waves-effect waves-light btn-small col s12 m12">
-                        <i class="far fa-edit left fa-sm"></i>Edit</a>
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                            id="edit" class="waves-effect waves-light btn-small col s12 m12">
+                            <i class="far fa-edit left fa-sm"></i>Edit</a>
                     </div>
                     <div class="col m6 s6">
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" 
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" 
                         id="delete" class="red waves-effect waves-light btn-small col s12 m12">
                         <i class="far fa-trash-alt left fa-sm"></i>Delete</a>
                     </div>
