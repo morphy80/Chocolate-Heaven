@@ -126,7 +126,6 @@ These standard [Materialize Colors](https://materializecss.com/color.html) work 
 - [x] The category of the recipe;
 - [x] More options with:-- Edit
                         -- Delete
-                        -- Create
 - [x] Register;
 - [x] Login;
 - [x] Search on both home and recipes page;
